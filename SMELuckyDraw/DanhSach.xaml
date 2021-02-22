@@ -1,0 +1,31 @@
+﻿<Window x:Class="SMELuckyDraw.DanhSach"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Members" Height="650" Width="600" WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen" Icon="image/monkey.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="591*"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1">
+                <TabControl FontSize="20">
+                    <TabItem Height="40" Width="200" Header="Lucky Members" >
+                        <DataGrid Name="gridNVTT" TabIndex="1" />
+                    </TabItem>
+                    <TabItem Height="40" Width="250" Header="UnLucky Members" >
+                        <DataGrid Name="gridNVCTT" TabIndex="2" />
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
